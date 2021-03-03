@@ -81,7 +81,7 @@ def classify_images(images_dir, results_dic, model):
         true_label = results_dic[key][0]
         if true_label in classifier_label:
             #print(results_dic[key])
-            results_dic[key].append([1])
+            results_dic[key].append(1)
         else:
-            results_dic[key].append([0])
+            results_dic[key].append(0)
     #print(results_dic)
