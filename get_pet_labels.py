@@ -68,7 +68,8 @@ def get_pet_labels(image_dir):
                   pet_label += word
                elif word == "_":
                   pet_label += ' '
-                
+           
+           pet_label = pet_label.strip()
             
            # If filename doesn't already exist in dictionary add it and it's
            # pet label - otherwise print an error message because indicates 

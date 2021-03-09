@@ -61,8 +61,7 @@ def main():
     #             get_pet_labels(in_arg.dir)
     # This function creates the results dictionary that contains the results, 
     # this dictionary is returned from the function call as the variable results
-    results = get_pet_labels(None)
-
+    results = get_pet_labels(in_arg.dir)
     # Function that checks Pet Images in the results Dictionary using results    
     check_creating_pet_image_labels(results)
 
@@ -73,8 +72,8 @@ def main():
     # function call with in_arg.arch  Once you have done the replacements your
     # function call should look like this: 
     #             classify_images(in_arg.dir, results, in_arg.arch)
-    # Creates Classifier Labels with classifier function, Compares Labels, 
-    # and adds these results to the results dictionary - results
+    # Creates Classifier    Labels with classifier function, Compares Labels, 
+    #  adds these results to the results dictionary - results
     classify_images(in_arg.dir, results, in_arg.arch)
 
     # Function that checks Results Dictionary using results    
@@ -120,7 +119,7 @@ def main():
     end_time = time()
     
     # TODO 0: Computes overall runtime in seconds & prints it in hh:mm:ss format
-    tot_time = start_time - end_time#calculate difference between end time and start time
+    tot_time = end_time - start_time#calculate difference between end time and start time
     print("\n** Total Elapsed Runtime:",
           str(int((tot_time/3600)))+":"+str(int((tot_time%3600)/60))+":"
           +str(int((tot_time%3600)%60)) )
